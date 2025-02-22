@@ -1,0 +1,54 @@
+.navbar {
+    background-color: var(--secondary-background-color);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem 4rem;
+    border-bottom: 1px solid black;
+
+    ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-right: 3rem;
+            margin-bottom: 0;
+            background-color: var(--li-background-color);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 8px;
+
+            a {
+                color: var(--button-text-color);
+            }
+
+            a:hover {
+                color: var(--link-hover-color);
+            }
+        }
+    }
+
+    button {
+        margin-bottom: 0;
+    }
+}
+
+.mainNavLogo {
+    float: left;
+}
+
+@media screen and (max-width: var(--tablet)) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media screen and (max--width: var(--mobile)) {
+    .navbar {
+        padding: 1rem;
+    }
+}
