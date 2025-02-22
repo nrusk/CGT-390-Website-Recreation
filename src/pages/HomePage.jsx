@@ -69,6 +69,8 @@ const HomePage = () => {
   return (
     <Wrapper>
       <h1>Top TV Shows and Movies List</h1>
+      <h6 className={styles["WIP"]}>-Work in Progress-</h6>
+      <h6 className={styles["WIP2"]}>and still using temporary data</h6>
       <div className={styles["filter-wrapper"]}>
         <div className={styles["filter--select"]}>
           <label htmlFor="title-select">Select a title: </label>
