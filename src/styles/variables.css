@@ -17,6 +17,7 @@ body {
     --link-hover-color: var(--text-color);
 
     --li-background-color: #52525a;
+    --card-background-color: #5d5d5d;
 
     /*font*/
     --font-family: 'Playwrite NZ', sans-serif;
@@ -27,6 +28,7 @@ body {
 
     /*border*/
     --border-radius: 8px;
+    --card-border-radius: 0px 0px 40px 40px;
     --border-color: #e0e0e0;
 
     /*shadow*/

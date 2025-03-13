@@ -1,11 +1,11 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
-import styles from "../styles/profiledetail.module.css";
+import styles from "../styles/titleDetail.module.css";
 import { Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
 
-const ProfileDetailPage = () => {
+const TitleDetailPage = () => {
     const [profile, setProfile] = useState({});
     const { id } = useParams();
     const { isLogin } = useContext(AuthContext);
@@ -20,15 +20,18 @@ const ProfileDetailPage = () => {
 
     return (
         <Wrapper>
-            <h1>{profile.name}</h1>
+            <h1 className={styles["h1Detail"]}>{profile.name}</h1>
             <div className={styles["flex-container"]}>
-                <p>{profile.title}</p>
-                <p>{profile.bio}</p>
                 <img src={profile.image_url} alt={profile.name} />
+                <div className={styles["flex-container2"]}>
+                <p className={styles["type"]}>Type: <span>{profile.title}</span></p>
+                <p>Genre: <span>{profile.bio}</span></p>
+                </div>
                 {isLogin && <Link to="edit" className={styles['button']}>Edit Title</Link>}
+            
             </div>
         </Wrapper>
     );
 };
 
-export default ProfileDetailPage;
+export default TitleDetailPage;

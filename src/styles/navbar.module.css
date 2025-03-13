@@ -1,7 +1,7 @@
 .navbar {
     background-color: var(--secondary-background-color);
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 4rem;
     border-bottom: 1px solid black;
@@ -35,11 +35,26 @@
     button {
         margin-bottom: 0;
     }
+    .logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .wrapper-left {
+        padding-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+     }
+     .wrapper-right {
+        padding-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+     }
 }
 
-.mainNavLogo {
-    float: left;
-}
+
 
 @media screen and (max-width: var(--tablet)) {
     .navbar {

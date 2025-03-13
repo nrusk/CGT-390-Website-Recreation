@@ -10,8 +10,7 @@ const Card = ({ image_url, name, title, email }) => {
                 <img src={image_url} alt={name} />
             </div>
             <div className={style["profile-card__content"]}>
-                <p>{name}</p>
-                <p>{title}</p>
+                <p className={style["name"]}>{name}</p>
                 {/* <p>
                     <a href={`mailto:${email}`}>{email}</a>
                 </p> */}

@@ -6,16 +6,16 @@
     border: 2px solid black;
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-left: 130px;
+    padding-left: 100px;
     padding-right: 20px;
+    border-radius: 5px;
 }
 
 /*filters*/
 .filter-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
-    align-items: center;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
     margin-top: 3rem;
     background-color: var(--secondary-background-color);
@@ -23,10 +23,32 @@
     padding-top: 15px;
     padding-bottom: 10px;
     width: 100%;
+    border-radius: 5px;
  }
 
- .filter--search,
- .filter--select,
+ .filter-wrapper-left {
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+ }
+ .filter-wrapper-right {
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+ }
+
+ .filter--search {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+ }
+
+ .filter--select {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+ }
+
  button {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
@@ -62,3 +84,10 @@
 .WIP2 {
     text-align: center;
 }
+
+.pageButtons {
+        button {
+            background-color: none;
+            border-radius: 0px;
+        }
+    }

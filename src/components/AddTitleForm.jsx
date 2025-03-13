@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
-import style from "../styles/ProfileForm.module.css";
+import style from "../styles/titleForm.module.css";
 import { useNavigate } from "react-router-dom";
 
-const ProfileForm = ({ isEdit = false, currentProfile = {} }) => {
+const AddTitleForm = ({ isEdit = false, currentProfile = {} }) => {
     const navigate = useNavigate();
     const [data, setData] = useState({ name: "", title: "", email: "", bio: "", image: null });
     const nameRef = useRef(null);
@@ -133,4 +133,4 @@ const ProfileForm = ({ isEdit = false, currentProfile = {} }) => {
     );
 };
 
-export default ProfileForm;
+export default AddTitleForm;

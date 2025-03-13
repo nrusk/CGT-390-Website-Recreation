@@ -5,6 +5,7 @@ import { useContext } from "react";
 import AuthContext from "../contexts/AuthContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faChevronLeft, faChevronRight, faGear, faSignOut, faPlus } from '@fortawesome/free-solid-svg-icons';
+import Logo from "../assets/logo.svg"
 
 const Navbar = () => {
     const { mode, handleModeChange } = useContext(ModeContext);
@@ -17,6 +18,10 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles["navbar"]}`}>
+            <div className={styles["wrapper-left"]}>
+                <Link to="/"><img src={Logo} alt="logo"/></Link>
+            </div>
+            <div className={styles["wrapper-right"]}>
             <ul>
                 <li>
                     <Link to="/">Home</Link>
@@ -41,8 +46,9 @@ const Navbar = () => {
                 </ul>
                 }
             <button onClick={handleModeChange}>
-                {mode === "light" ? "Light" : "Dark"} <FontAwesomeIcon icon={faGear} />
+                {mode === "light" ? "" : ""} <FontAwesomeIcon icon={faGear} />
             </button>
+            </div>
         </nav>
     );
 };

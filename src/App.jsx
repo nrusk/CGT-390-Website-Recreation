@@ -1,12 +1,11 @@
 import "./App.css";
-import AboutPage from "./pages/AboutPage";
 import Navbar from "./components/Navbar";
-import AddProfilePage from "./pages/AddProfilePage";
+import AddTitlePage from "./pages/AddTitlePage";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
-import ProfileDetailPage from "./pages/ProfileDetailPage";
-import ProfileEditPage from "./pages/ProfileEditPage";
-import ProfileIndexPage from "./pages/ProfileIndexPage";
+import ProfileDetailPage from "./pages/TitleDetailPage";
+import ProfileEditPage from "./pages/TitleEditPage";
+import TitleIndexPage from "./pages/TitleIndexPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import { HashRouter, Routes, Route } from "react-router-dom";
@@ -28,13 +27,12 @@ const App = () => {
       <main className={mode === "light" ? "light" : "dark"}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
           <Route path="/add-profile" element={
             <ProtectedRoute>
-              <AddProfilePage />
+              <AddTitlePage />
             </ProtectedRoute>
             } />
-          <Route path="/profile/:id" element={<ProfileIndexPage />}>
+          <Route path="/profile/:id" element={<TitleIndexPage />}>
             <Route index element={<ProfileDetailPage />} />
             <Route path="edit" element={<ProtectedRoute><ProfileEditPage /></ProtectedRoute>} />
           </Route>

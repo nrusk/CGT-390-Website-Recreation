@@ -1,8 +1,7 @@
 import { useState, useEffect, useContext, useRef } from "react";
-import style from "../styles/ProfileForm.module.css";
+import style from "../styles/titleForm.module.css";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
-import { use } from "react";
 
 const AuthForm = ({isRegister = false}) => {
     const usernameRef = useRef(null);

@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 
-const ProfileIndexPage = () => {
+const TitleIndexPage = () => {
     return (
         <Outlet />
     );
 };
 
-export default ProfileIndexPage;
+export default TitleIndexPage;
